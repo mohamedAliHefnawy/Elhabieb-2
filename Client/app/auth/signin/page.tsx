@@ -88,21 +88,17 @@ const SignInPage = () => {
 
           if (validity === "Delivery") {
             new Audio("/mp3/loginSucess.mp3").play();
-            window.location.href = `https://elhabieb.vercel.app/delivery`;
-            // router.push("/delivery");
+            router.push("/delivery");
           } else if (validity === "Client" || validity === "Markter") {
             new Audio("/mp3/loginSucess.mp3").play();
-            window.location.href = `https://elhabieb.vercel.app/`;
-            // router.push("/");
+            router.push("/");
           } else if (validity === "Employ" || validity === "Admin") {
             new Audio("/mp3/loginSucess.mp3").play();
-            window.location.href = `https://elhabieb.vercel.app/dashboard`;
-            // router.push("/dashboard");
+            router.push("/dashboard");
           } else if (validity === "Pos") {
             Cookies.set("colorPos", colorCompany);
             new Audio("/mp3/loginSucess.mp3").play();
-            window.location.href = `https://elhabieb.vercel.app/pos`;
-            // router.push("/pos");
+            router.push("/pos");
           }
         } catch (error) {
           Alert("error", "توجد مشكلة في الإنترنت حاول تنشيط الصفحة");
